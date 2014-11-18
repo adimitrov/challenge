@@ -5,7 +5,7 @@ module Wolfram
     describe '.influenced' do
       context 'with no or wrong api key' do
         it 'should raise an error', :vcr do
-          expect { Wolfram::Client.new.influenced(["ruby","clojue"]) }.to raise_error ArgumentError
+          expect { Wolfram::Client.new.influenced(%w(ruby clojue)) }.to raise_error ArgumentError
         end
       end
 
@@ -15,7 +15,7 @@ module Wolfram
             .with("/v2/query", { query: { appid: 'E6R6JY-G9X7Y4JPH3', input: "ruby,clojue" } })
             .and_call_original
 
-          result = client.influenced(["ruby","clojue"])
+          result = client.influenced(%w(ruby clojue))
           expect(result).to be_kind_of(Array)
           expect(result).to include('coffeescript')
         end
@@ -32,7 +32,7 @@ module Wolfram
     context 'from yaml file' do
       context 'with valid yaml' do
         it 'should call #influenced with valid languages', :vcr do
-          expect(client).to receive(:influenced).with(["ruby", "scheme", "haskell"])
+          expect(client).to receive(:influenced).with(%w(ruby scheme haskell))
           client.influenced_from_yaml(File.expand_path('../../fixtures/languages1.yml', File.dirname(__FILE__)))
         end
       end

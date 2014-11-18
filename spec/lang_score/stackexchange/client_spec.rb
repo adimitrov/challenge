@@ -10,7 +10,7 @@ module Stackexchange
           .with("/2.2/tags/ruby;java/info", hash_including(:query))
           .and_call_original
 
-        result = client.tag_info(['ruby', 'java'])
+        result = client.tag_info(%w(ruby java))
         expect(result).to be_a_kind_of(Hash)
         expect(result.keys).to include('ruby', 'java')
       end
@@ -38,7 +38,7 @@ module Stackexchange
     context 'from yaml file' do
       context 'valid yaml', :vcr do
         it 'should call #tag_info with valid tags' do
-          expect(client).to receive(:tag_info).with(["ruby", "scheme", "haskell"])
+          expect(client).to receive(:tag_info).with(%w(ruby scheme haskell))
           client.tag_info_from_yaml(File.expand_path('../../fixtures/languages1.yml', File.dirname(__FILE__)))
         end
       end

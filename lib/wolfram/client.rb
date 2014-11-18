@@ -40,7 +40,7 @@ module Wolfram
         normalize_languages languages
     end
 
-    def normalize_languages languages
+    def normalize_languages(languages)
       languages.map { |item| item.gsub('Windows ', '') }
         .map { |item| item.gsub(' ', '-') }
         .map(&:downcase)

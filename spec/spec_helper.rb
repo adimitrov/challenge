@@ -4,7 +4,6 @@ require 'support/vcr'
 require 'stackexchange/client'
 require 'wolfram/client'
 
-
 RSpec.configure do |config|
   config.formatter = 'documentation'
   config.order = 'random'

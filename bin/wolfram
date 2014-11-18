@@ -15,7 +15,7 @@ OptionParser.new do |opts|
     exit
   end
 
-  opts.on '-l', '--list FILE', "Language list (yml)" do |l, k|
+  opts.on '-l', '--list FILE', "Language list (yml)" do |l|
     options[:language_file] = l
   end
 

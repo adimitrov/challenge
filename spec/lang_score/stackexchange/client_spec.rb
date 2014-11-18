@@ -32,13 +32,13 @@ module Stackexchange
       context 'valid yaml', :vcr do
         it 'should call #tag_info with valid tags' do
           expect(client).to receive(:tag_info).with(["ruby", "scheme", "haskell"])
-          client.tag_info_from_yaml('/Users/alex/Sites/conit/lang_score/spec/fixtures/languages1.yml')
+          client.tag_info_from_yaml(File.expand_path('../../fixtures/languages1.yml', File.dirname(__FILE__)))
         end
       end
       context 'invalid yaml' do
         it 'should raise an error' do
           expect {
-            client.tag_info_from_yaml('/Users/alex/Sites/conit/lang_score/spec/fixtures/languages_malformed.yml')
+            client.tag_info_from_yaml(File.expand_path('../../fixtures/languages1.yml', File.dirname(__FILE__)))
           }.to raise_error
         end
       end

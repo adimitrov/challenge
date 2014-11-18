@@ -25,7 +25,7 @@ module Wolfram
 
     def parse_response response
       if response["queryresult"]["error"][0] == 'true'
-        raise ArgumentError
+        raise ArgumentError, response["queryresult"]["error"][1]["msg"]
       end
 
       # Select the right cell and strip

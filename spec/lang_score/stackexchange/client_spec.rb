@@ -38,7 +38,7 @@ module Stackexchange
       context 'invalid yaml' do
         it 'should raise an error' do
           expect {
-            client.tag_info_from_yaml(File.expand_path('../../fixtures/languages1.yml', File.dirname(__FILE__)))
+            client.tag_info_from_yaml(File.expand_path('../../fixtures/languages_malformed.yml', File.dirname(__FILE__)))
           }.to raise_error
         end
       end

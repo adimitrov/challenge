@@ -6,6 +6,10 @@ module Stackexchange
 
     context 'with array of tags' do
       it 'should fetch tags', :vcr do
+        expect(client.class).to receive(:get)
+          .with("/2.2/tags/ruby;java/info", hash_including(:query))
+          .and_call_original
+
         result = client.tag_info(['ruby', 'java'])
         expect(result).to be_a_kind_of(Hash)
         expect(result.keys).to include('ruby', 'java')
@@ -14,6 +18,9 @@ module Stackexchange
 
     context 'with single tag' do
       it 'should fetch tags', :vcr do
+        expect(client.class).to receive(:get)
+          .with("/2.2/tags/ruby/info", hash_including(:query))
+          .and_call_original
         result = client.tag_info('ruby')
         expect(result).to be_a_kind_of(Hash)
         expect(result.keys).to include('ruby')

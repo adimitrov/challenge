@@ -5,13 +5,17 @@ module Wolfram
     describe '.influenced' do
       context 'with no or wrong api key' do
         it 'should raise an error', :vcr do
-          expect { Wolfram::Client.new.influenced("ruby,clojue") }.to raise_error ArgumentError
+          expect { Wolfram::Client.new.influenced(["ruby","clojue"]) }.to raise_error ArgumentError
         end
       end
 
       context 'with api key' do
         it 'should return an array of languages', :vcr do
-          result = client.influenced("ruby,clojue")
+          expect(client.class).to receive(:get)
+            .with("/v2/query", { query: { appid: 'E6R6JY-G9X7Y4JPH3', input: "ruby,clojue" } })
+            .and_call_original
+
+          result = client.influenced(["ruby","clojue"])
           expect(result).to be_kind_of(Array)
           expect(result).to include('coffeescript')
         end

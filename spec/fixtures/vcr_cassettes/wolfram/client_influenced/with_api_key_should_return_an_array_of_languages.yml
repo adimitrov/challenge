@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.wolframalpha.com/v2/query?appid=E6R6JY-G9X7Y4JPH3&input=ruby,clojue%20programming%20language
+    uri: http://api.wolframalpha.com/v2/query?appid=E6R6JY-G9X7Y4JPH3&input=ruby,clojue
     body:
       encoding: US-ASCII
       string: ''
@@ -19,15 +19,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Nov 2014 17:30:38 GMT
+      - Tue, 18 Nov 2014 22:33:59 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Type:
       - text/xml;charset=utf-8
       Content-Length:
-      - '5472'
+      - '5460'
       Set-Cookie:
-      - WR_SID=92.247.236.222.1416331838175112; path=/; max-age=315360000; domain=.wolframalpha.com
+      - WR_SID=95.111.77.108.1416350039758923; path=/; max-age=315360000; domain=.wolframalpha.com
       Connection:
       - close
     body:
@@ -40,14 +40,14 @@ http_interactions:
             datatypes='Internet,People,ProgrammingLanguage'
             timedout=''
             timedoutpods=''
-            timing='1.807'
-            parsetiming='0.394'
+            timing='2.382'
+            parsetiming='0.278'
             parsetimedout='false'
             recalculate=''
-            id='MSPa104323055ia5d2efh817000067a1hig1ca246gd7'
-            host='http://www5a.wolframalpha.com'
-            server='62'
-            related='http://www5a.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa104423055ia5d2efh81700004eb3b84hgi527fh8&amp;s=62'
+            id='MSPa1401g51hg6g04d7fggh00000ibiad5f78d821ff'
+            host='http://www3.wolframalpha.com'
+            server='41'
+            related='http://www3.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa1411g51hg6g04d7fggh0000104ebd4ch9h50af3&amp;s=41'
             version='2.6'>
          <pod title='Input interpretation'
              scanner='Identity'
@@ -57,7 +57,7 @@ http_interactions:
              numsubpods='1'>
           <subpod title=''>
            <plaintext>Ruby  (programming language)  |  Clojure  (programming language)</plaintext>
-           <img src='http://www5a.wolframalpha.com/Calculate/MSP/MSP104523055ia5d2efh817000063g5dfg4hh83dh17?MSPStoreType=image/gif&amp;s=62'
+           <img src='http://www3.wolframalpha.com/Calculate/MSP/MSP1421g51hg6g04d7fggh000027hg07cc91d0e8ei?MSPStoreType=image/gif&amp;s=41'
                alt='Ruby  (programming language)  |  Clojure  (programming language)'
                title='Ruby  (programming language)  |  Clojure  (programming language)'
                width='458'
@@ -78,7 +78,7 @@ http_interactions:
         influenced by | Ada  |  C++  |  CLU  |  Dylan  |  Eiffel  |  Lisp  |  Perl  |  Python  |  Scheme  |  Smalltalk | Common Lisp  |  Erlang  |  Haskell  |  Java  |  Lisp  |  ML  |  Prolog  |  Ruby  |  Scheme
         languages influenced | BeanShell  |  Clojure  |  CoffeeScript  |  D  |  Elixir  |  Falcon  |  Fantom  |  Ferite  |  Frink  |  Groovy  |  Ioke  |  Judoscript  |  Mantra  |  Nu  |  Perl 6  |  Urbi  |  Windows PowerShell | Elixir
         official website | ruby-lang.org | clojure.org</plaintext>
-           <img src='http://www5a.wolframalpha.com/Calculate/MSP/MSP104623055ia5d2efh81700001cfi0063be0aaghd?MSPStoreType=image/gif&amp;s=62'
+           <img src='http://www3.wolframalpha.com/Calculate/MSP/MSP1431g51hg6g04d7fggh00004ifdd5ce29e24e5b?MSPStoreType=image/gif&amp;s=41'
                alt=' | Ruby | Clojure
         language designers | Yukihiro Matsumoto | Rich Hickey
         programming paradigms | dynamic programming language  |  functional programming  |  imperative programming  |  interpreted language  |  multi-paradigm programming language  |  object-oriented programming  |  reflective programming  |  structured programming | concurrent computing  |  functional programming  |  multi-paradigm programming language
@@ -105,7 +105,7 @@ http_interactions:
              numsubpods='2'>
           <subpod title='Ruby'>
            <plaintext></plaintext>
-           <img src='http://www5a.wolframalpha.com/Calculate/MSP/MSP104723055ia5d2efh81700001cgh251cc9bgg0b4?MSPStoreType=image/gif&amp;s=62'
+           <img src='http://www3.wolframalpha.com/Calculate/MSP/MSP1441g51hg6g04d7fggh000024h4d7ec4h2edc5f?MSPStoreType=image/gif&amp;s=41'
                alt=''
                title=''
                width='431'
@@ -113,7 +113,7 @@ http_interactions:
           </subpod>
           <subpod title='Clojure'>
            <plaintext></plaintext>
-           <img src='http://www5a.wolframalpha.com/Calculate/MSP/MSP104823055ia5d2efh81700005b510f1gc2554cga?MSPStoreType=image/gif&amp;s=62'
+           <img src='http://www3.wolframalpha.com/Calculate/MSP/MSP1451g51hg6g04d7fggh00001dd549f6895hdhg0?MSPStoreType=image/gif&amp;s=41'
                alt=''
                title=''
                width='444'
@@ -131,5 +131,5 @@ http_interactions:
          </sources>
         </queryresult>
     http_version: 
-  recorded_at: Tue, 18 Nov 2014 17:30:40 GMT
+  recorded_at: Tue, 18 Nov 2014 22:34:03 GMT
 recorded_with: VCR 2.9.3

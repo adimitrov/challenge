@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.wolframalpha.com/v2/query?appid=&input=ruby,clojue%20programming%20language
+    uri: http://api.wolframalpha.com/v2/query?appid=&input=ruby,clojue
     body:
       encoding: US-ASCII
       string: ''
@@ -19,15 +19,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Nov 2014 17:30:37 GMT
+      - Tue, 18 Nov 2014 22:33:59 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Type:
       - text/xml;charset=utf-8
       Content-Length:
-      - '417'
+      - '416'
       Set-Cookie:
-      - WR_SID=92.247.236.222.1416331837262879; path=/; max-age=315360000; domain=.wolframalpha.com
+      - WR_SID=95.111.77.108.1416350039145027; path=/; max-age=315360000; domain=.wolframalpha.com
       Connection:
       - close
     body:
@@ -45,8 +45,8 @@ http_interactions:
             parsetimedout='false'
             recalculate=''
             id=''
-            host='http://www4b.wolframalpha.com'
-            server='42'
+            host='http://www2.wolframalpha.com'
+            server='20'
             related=''
             version='2.6'>
          <error>
@@ -55,5 +55,5 @@ http_interactions:
          </error>
         </queryresult>
     http_version: 
-  recorded_at: Tue, 18 Nov 2014 17:30:37 GMT
+  recorded_at: Tue, 18 Nov 2014 22:34:00 GMT
 recorded_with: VCR 2.9.3
